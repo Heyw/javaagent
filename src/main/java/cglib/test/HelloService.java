@@ -2,8 +2,8 @@ package cglib.test;
  
 public class HelloService {
  
-    public HelloService() {
-        System.out.println("HelloService构造");
+    public HelloService(int a) {
+        System.out.println("HelloService构造"+a);
     }
  
     /**
@@ -15,6 +15,7 @@ public class HelloService {
     }
  
     public void sayHello() {
+    	
         System.out.println("HelloService:sayHello");
     }
 }
