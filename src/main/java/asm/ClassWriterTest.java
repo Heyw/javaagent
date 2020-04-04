@@ -14,7 +14,7 @@ public class ClassWriterTest {
 	public static void main(String[] args) throws IOException {
 		ClassWriter cw = new ClassWriter(0);
 		//类版本，访问标志，类全名，泛型，父类，接口
-		cw.visit(Opcodes.V1_8, Opcodes.ACC_PUBLIC+Opcodes.ACC_ABSTRACT+Opcodes.ACC_INTERFACE, ClassWriterTest.class.getPackageName()+"/TestClassWriter",
+		cw.visit(Opcodes.V1_8, Opcodes.ACC_PUBLIC+Opcodes.ACC_ABSTRACT+Opcodes.ACC_INTERFACE, ClassWriterTest.class.getPackage()+"/TestClassWriter",
 				null, "java/lang/Object", null);
 		//访问标志，名字，类型，泛型，值
 		cw.visitField(Opcodes.ACC_PUBLIC+Opcodes.ACC_STATIC+Opcodes.ACC_FINAL, "Less", "I", null, new Integer(-1)).visitEnd();
