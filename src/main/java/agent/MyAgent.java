@@ -14,7 +14,7 @@ public class MyAgent
         System.out.println("=========premain方法执行========");
         System.out.println(agentOps);
         // 添加Transformer
-        inst.addTransformer(new MyTransformer());
+        inst.addTransformer(new LogerTransformer());
 
     }
 
@@ -29,9 +29,5 @@ public class MyAgent
         System.out.println(agentOps);
     }
 
-    public static void main(String[] args)
-    {
-
-    }
 
 }

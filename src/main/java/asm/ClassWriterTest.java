@@ -23,7 +23,7 @@ public class ClassWriterTest {
 		cw.visitMethod(Opcodes.ACC_PUBLIC+Opcodes.ACC_ABSTRACT, "compareTo", "(Ljava/lang/Object;)I", null, null).visitEnd();
 		cw.visitEnd();//通知classrWriter，类定义完成
 		String systemRootUrl=(new File("")).toURI().toURL().getPath();
-		File file=new File(systemRootUrl+ClassWriterTest.class.getPackageName()+"/TestClassWriter.class");
+		File file=new File(ClassWriterTest.class.getResource("").getPath()+"/TestClassWriter.class");
 		String parent=file.getParent();
 		File parent1=new File(parent);
 		parent1.mkdir();
